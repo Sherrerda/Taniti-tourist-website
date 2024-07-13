@@ -12,13 +12,16 @@ body {
 }
 
 /* Navigation bar */
-nav{
+nav {
     display: flex;
     justify-content: center;
     background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -27,22 +30,23 @@ nav ul{
     justify-content: center;
 }
 
-nav li{
-margin: 0 20px;
+nav li {
+    margin: 0 20px;
 }
 
-li a{
+li a {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover{
+
+li a:hover {
     background-color: red;
 }
 
-.drop_down{
+.drop_down {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -51,7 +55,7 @@ li a:hover{
     z-index: 1;
 }
 
-.drop_down a{
+.drop_down a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -59,24 +63,29 @@ li a:hover{
     text-align: left;
 }
 
-.drop_down a:hover{background-color: #f1f1f1;}
+.drop_down a:hover {
+    background-color: #f1f1f1;
+}
 
-nav ul li:hover .drop_down{
+nav ul li:hover .drop_down {
     display: block;
 }
 
-.active{
+.active {
     background-color: #555;
 }
+
 /* body */
 
 body {
     background:
         url('./resources/michael-DXQB5D1njMY-unsplash.jpg') no-repeat center top,
-        url('./resources/vecteezy_defocus-blurred-transparent-blue-colored-clear-calm-water_32479483.png') repeat;
+        url('./resources/vecteezy_defocus-blurred-transparent-blue-colored-clear-calm-water_32479483.png') no-repeat center center;
     background-size: contain, cover;
+    background-attachment: fixed;
     position: relative;
     color: black;
+    padding-top: 40px;
 }
 
 body::before {
@@ -130,7 +139,7 @@ section div article {
     text-align: justify;
 }
 
-section div article p{
+section div article p {
     margin-top: 10px;
 }
 
@@ -168,20 +177,22 @@ footer a:hover {
     color: lightgray;
 }
 
-.social-media .fa{
+.social-media .fa {
     font-size: 30px;
 }
 
 /* Media Queries */
-@media (max-width: 500px){
-    section .content{
+@media (max-width: 500px) {
+    section .content {
         flex-direction: column;
     }
-    section .img-container{
+
+    section .img-container {
         order: 1;
         width: 100%;
     }
-    section div article{
+
+    section div article {
         order: 2;
         width: 100%;
     }
