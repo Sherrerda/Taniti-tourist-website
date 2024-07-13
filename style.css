@@ -183,7 +183,10 @@ footer a:hover {
 }
 
 /* Media Queries */
-@media (max-width: 500px) {
+@media (max-width: 690px) {
+    body{
+        padding-top: 80px;
+    }
     section .content {
         flex-direction: column;
     }
@@ -196,5 +199,15 @@ footer a:hover {
     section div article {
         order: 2;
         width: 100%;
+    }
+}
+@media (max-width: 370px){
+    body{
+        padding-top: 120px;
+    }
+}
+@media (max-width: 320px){
+    body{
+        padding-top: 170px;
     }
 }
